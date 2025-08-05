@@ -1,4 +1,4 @@
-import { Wallet, Smartphone, Users, MessageSquare, Phone } from 'lucide-react';
+import { Wallet, Smartphone, Users, MessageSquare, Phone, GraduationCap } from 'lucide-react';
 
 export default function Home() {
   const admins = [
@@ -12,15 +12,23 @@ export default function Home() {
   return (
     <>
       <section className="text-center py-20 px-4 bg-gradient-to-br from-blue-50 to-purple-50">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-800">
-          Topup XTE 2
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
+          Jasa Topup X TE 2 & TO 1
         </h1>
         <p className="mt-4 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
           Solusi cepat dan mudah untuk semua kebutuhan topup e-wallet dan convert pulsa dengan <span className="font-semibold text-purple-600">biaya admin termurah</span>.
         </p>
-        <a href="#layanan" className="mt-8 inline-block bg-purple-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-purple-700 transition-transform transform hover:scale-105">
-          Lihat Layanan
-        </a>
+        
+        <div className="inline-flex items-center gap-x-2 bg-purple-100 text-purple-800 text-sm font-semibold px-4 py-2 rounded-full mt-6">
+          <GraduationCap className="h-5 w-5" />
+          <span>Khusus Siswa/i SMK N2 Banyumas</span>
+        </div>
+
+        <div className="mt-8">
+          <a href="#kontak" className="inline-block bg-purple-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-purple-700 transition-transform transform hover:scale-105">
+            Hubungi Admin
+          </a>
+        </div>
       </section>
 
       <section id="layanan" className="py-16 px-4">
@@ -99,4 +107,4 @@ export default function Home() {
       </section>
     </>
   );
-}
+ }
