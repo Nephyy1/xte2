@@ -38,7 +38,7 @@ export default function InformasiPage() {
           </div>
           <div className="flex justify-center">
             <Image
-              src="/smk2bms.jpg"
+              src="/smk2bms.png"
               alt="Logo SMK Negeri 2 Banyumas"
               width={250}
               height={250}
