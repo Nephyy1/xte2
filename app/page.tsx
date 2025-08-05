@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <section className="text-center py-20 px-4 bg-gradient-to-br from-blue-50 to-purple-50">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
-          Jasa Topup X TE 2 & TO 1
+          Jasa Topup SMKN 2 Banyumas
         </h1>
         <p className="mt-4 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
           Solusi cepat dan mudah untuk semua kebutuhan topup e-wallet dan convert pulsa dengan <span className="font-semibold text-purple-600">biaya admin termurah</span>.
