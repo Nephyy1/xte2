@@ -2,16 +2,17 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, LayoutGrid, ArrowRightLeft, Phone } from "lucide-react";
+import { Menu, X, LayoutGrid, ArrowRightLeft, Phone, Info } from "lucide-react";
 import Image from "next/image";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { href: "#layanan", label: "Layanan", icon: LayoutGrid },
-    { href: "#cara-transaksi", label: "Cara Transaksi", icon: ArrowRightLeft },
-    { href: "#kontak", label: "Kontak", icon: Phone },
+    { href: "/informasi", label: "Informasi", icon: Info },
+    { href: "/#layanan", label: "Layanan", icon: LayoutGrid },
+    { href: "/#cara-transaksi", label: "Cara Transaksi", icon: ArrowRightLeft },
+    { href: "/#kontak", label: "Kontak", icon: Phone },
   ];
 
   const handleLinkClick = () => {
