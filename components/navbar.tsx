@@ -23,8 +23,8 @@ export function Navbar() {
       <header className="sticky top-0 bg-white/80 backdrop-blur-md border-b z-30">
         <nav className="container mx-auto flex items-center justify-between p-4">
           <Link href="/" className="flex items-center space-x-2">
-            <Image src="/icon.svg" alt="Topup XTE 2 Logo" width={24} height={24} className="text-purple-600"/>
-            <span className="font-bold text-xl text-gray-800">Topup XTE 2</span>
+            <Image src="/icon.svg" alt="Logo" width={24} height={24} className="text-purple-600"/>
+            <span className="font-bold text-lg text-gray-800">Jasa Topup SMKN 2 Banyumas</span>
           </Link>
           
           <div className="hidden md:flex items-center space-x-8">
