@@ -1,6 +1,14 @@
 import { Wallet, Smartphone, Users, MessageSquare, Phone } from 'lucide-react';
 
 export default function Home() {
+  const admins = [
+    { name: 'Kalvin', class: 'XTE 2', number: '+62 877-8894-5246', waLink: 'https://wa.me/6287788945246' },
+    { name: 'Bintang', class: 'XTE 2', number: '+62 815-3333-1355', waLink: 'https://wa.me/6281533331355' },
+    { name: 'Nabil', class: 'XTE 2', number: '+62 813-2527-8459', waLink: 'https://wa.me/6281325278459' },
+    { name: 'Muhammad', class: 'XTE 2', number: '+62 851-6885-9292', waLink: 'https://wa.me/6285168859292' },
+    { name: 'Fauzi', class: 'XTO 1', number: '+62 858-7706-1152', waLink: 'https://wa.me/6285877061152' },
+  ];
+
   return (
     <>
       <section className="text-center py-20 px-4 bg-gradient-to-br from-blue-50 to-purple-50">
@@ -68,28 +76,24 @@ export default function Home() {
       <section id="kontak" className="py-16 px-4">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold text-gray-800 mb-2">Hubungi Admin</h2>
-          <p className="text-gray-500 mb-12 max-w-lg mx-auto">Siap bertransaksi? Hubungi salah satu admin di bawah ini.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            <div className="p-4 border rounded-xl text-center">
-              <Phone className="mx-auto mb-2 text-purple-600" size={28}/>
-              <h4 className="font-semibold text-lg">Admin 1</h4>
-              <p className="text-gray-500 text-sm">(Nomor akan datang)</p>
-            </div>
-            <div className="p-4 border rounded-xl text-center">
-              <Phone className="mx-auto mb-2 text-purple-600" size={28}/>
-              <h4 className="font-semibold text-lg">Admin 2</h4>
-              <p className="text-gray-500 text-sm">(Nomor akan datang)</p>
-            </div>
-            <div className="p-4 border rounded-xl text-center">
-              <Phone className="mx-auto mb-2 text-purple-600" size={28}/>
-              <h4 className="font-semibold text-lg">Admin 3</h4>
-              <p className="text-gray-500 text-sm">(Nomor akan datang)</p>
-            </div>
-            <div className="p-4 border rounded-xl text-center">
-              <Phone className="mx-auto mb-2 text-purple-600" size={28}/>
-              <h4 className="font-semibold text-lg">Admin 4</h4>
-              <p className="text-gray-500 text-sm">(Nomor akan datang)</p>
-            </div>
+          <p className="text-gray-500 mb-12 max-w-lg mx-auto">Siap bertransaksi? Klik salah satu admin di bawah ini untuk chat via WhatsApp.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {admins.map((admin) => (
+              <a
+                key={admin.name}
+                href={admin.waLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-6 border rounded-2xl text-center flex flex-col items-center justify-start transition-all duration-300 hover:shadow-purple-200 hover:shadow-lg hover:border-purple-300 hover:-translate-y-2"
+              >
+                <div className="bg-purple-100 text-purple-600 rounded-full p-3 mb-4">
+                  <Phone size={28}/>
+                </div>
+                <h4 className="font-bold text-xl text-gray-800">{admin.name}</h4>
+                <p className="text-gray-500 font-medium mb-2">{admin.class}</p>
+                <p className="text-gray-600 text-sm">{admin.number}</p>
+              </a>
+            ))}
           </div>
         </div>
       </section>
