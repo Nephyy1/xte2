@@ -9,6 +9,16 @@ export default function Home() {
     { name: 'Fauzi', class: 'XTO 1', number: '+62 858-7706-1152', waLink: 'https://wa.me/6285877061152' },
   ];
 
+  const getClassBadge = (className: string) => {
+    if (className.includes('XTE')) {
+      return 'bg-blue-100 text-blue-800';
+    }
+    if (className.includes('XTO')) {
+      return 'bg-green-100 text-green-800';
+    }
+    return 'bg-gray-100 text-gray-800';
+  };
+
   return (
     <>
       <section className="text-center py-20 px-4 bg-gradient-to-br from-blue-50 to-purple-50">
@@ -117,7 +127,9 @@ export default function Home() {
                   <Phone size={28}/>
                 </div>
                 <h4 className="font-bold text-xl text-gray-800">{admin.name}</h4>
-                <p className="text-gray-500 font-medium mb-2">{admin.class}</p>
+                <div className={`text-xs font-bold inline-block py-1 px-3 uppercase rounded-full mb-2 ${getClassBadge(admin.class)}`}>
+                  {admin.class}
+                </div>
                 <p className="text-gray-600 text-sm">{admin.number}</p>
               </a>
             ))}
