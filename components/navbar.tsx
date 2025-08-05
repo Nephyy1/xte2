@@ -38,9 +38,10 @@ export function Navbar() {
         </div>
       </nav>
 
+      {/* Perubahan ada di baris di bawah ini */}
       <div className={twMerge(
-        "fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-in-out md:hidden",
-        isOpen ? "translate-x-0" : "translate-x-full"
+        "fixed inset-0 z-50 bg-white md:hidden",
+        isOpen ? "flex flex-col" : "hidden"
       )}>
         <div className="flex justify-between items-center p-4 border-b">
            <Link href="/" className="flex items-center space-x-2" onClick={() => setIsOpen(false)}>
@@ -51,7 +52,7 @@ export function Navbar() {
             <X size={24} />
           </button>
         </div>
-        <div className="flex flex-col items-center space-y-8 mt-16">
+        <div className="flex flex-col items-center justify-center flex-1 space-y-8">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href} className="text-2xl text-gray-800 hover:text-purple-600" onClick={() => setIsOpen(false)}>
               {link.label}
