@@ -77,46 +77,4 @@ export function Navbar() {
       </div>
     </>
   );
-            }
-          <div className="md:hidden">
-            <button onClick={() => setIsOpen(true)} aria-label="Open Menu">
-              <Menu size={24} />
-            </button>
-          </div>
-        </nav>
-      </header>
-      
-      <div
-        className={`fixed inset-0 bg-black/60 z-40 md:hidden transition-opacity ${
-          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
-        onClick={() => setIsOpen(false)}
-      ></div>
-
-      <div
-        className={`fixed top-0 left-0 h-full w-72 bg-white z-50 shadow-xl transform transition-transform md:hidden ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
-        <div className="flex justify-between items-center p-4 border-b">
-          <span className="font-bold">Menu</span>
-          <button onClick={() => setIsOpen(false)} aria-label="Close Menu">
-            <X size={24} />
-          </button>
-        </div>
-        <div className="flex flex-col p-4 space-y-2">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={handleLinkClick}
-              className="text-gray-800 hover:text-purple-600 py-2 px-3 rounded-md text-lg"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
-      </div>
-    </>
-  );
 }
