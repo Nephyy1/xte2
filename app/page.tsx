@@ -1,4 +1,4 @@
-import { Wallet, Smartphone, Users, MessageSquare, Phone, GraduationCap } from 'lucide-react';
+import { Wallet, Smartphone, Users, MessageSquare, Phone, GraduationCap, CheckCircle2 } from 'lucide-react';
 
 export default function Home() {
   const admins = [
@@ -36,20 +36,39 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-gray-800 mb-2">Layanan Kami</h2>
           <p className="text-gray-500 mb-12 max-w-lg mx-auto">Kami menyediakan berbagai layanan untuk memudahkan transaksi digital Anda.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="p-8 border rounded-xl shadow-sm hover:shadow-lg transition-shadow">
-              <div className="bg-blue-100 text-blue-600 rounded-full p-3 inline-block mb-4">
+            
+            <div className="p-8 border rounded-xl shadow-sm hover:shadow-lg transition-shadow flex flex-col">
+              <div className="mx-auto bg-blue-100 text-blue-600 rounded-full p-3 inline-block mb-4">
                 <Wallet size={32} />
               </div>
               <h3 className="text-2xl font-semibold mb-2">Top Up E-Wallet</h3>
-              <p className="text-gray-600">Isi saldo Dana, GoPay, OVO, dan ShopeePay dengan cepat dan biaya admin sangat rendah.</p>
+              <div className="text-left mt-4 space-y-2 text-gray-600 flex-grow">
+                <p className="pb-2">Isi saldo e-wallet populer dengan detail sebagai berikut:</p>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <CheckCircle2 className="h-5 w-5 text-purple-500 mr-3 mt-1 flex-shrink-0" />
+                    <span>
+                      <span className="font-bold text-gray-800">DANA:</span> Minimal topup <span className="font-semibold">Rp 5.000</span> dengan biaya admin hanya <span className="font-semibold">Rp 2.000</span>.
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle2 className="h-5 w-5 text-purple-500 mr-3 mt-1 flex-shrink-0" />
+                    <span>
+                      <span className="font-bold text-gray-800">GoPay, OVO, ShopeePay:</span> Minimal topup <span className="font-semibold">Rp 10.000</span> dengan biaya admin <span className="font-semibold">Rp 3.000</span>.
+                    </span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="p-8 border rounded-xl shadow-sm hover:shadow-lg transition-shadow">
-              <div className="bg-green-100 text-green-600 rounded-full p-3 inline-block mb-4">
+
+            <div className="p-8 border rounded-xl shadow-sm hover:shadow-lg transition-shadow flex flex-col">
+              <div className="mx-auto bg-green-100 text-green-600 rounded-full p-3 inline-block mb-4">
                 <Smartphone size={32} />
               </div>
               <h3 className="text-2xl font-semibold mb-2">Convert Pulsa</h3>
-              <p className="text-gray-600">Ubah pulsa berlebih Anda menjadi saldo e-wallet dengan rate terbaik di kelas.</p>
+              <p className="text-gray-600 flex-grow">Ubah pulsa berlebih Anda menjadi saldo e-wallet dengan rate terbaik di kelas.</p>
             </div>
+            
           </div>
         </div>
       </section>
@@ -107,4 +126,4 @@ export default function Home() {
       </section>
     </>
   );
- }
+}
