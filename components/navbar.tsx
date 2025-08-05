@@ -16,7 +16,8 @@ export function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b">
+    // Perubahan ada di baris di bawah ini, z-50 dihapus
+    <header className="sticky top-0 bg-white/80 backdrop-blur-md border-b">
       <nav className="container mx-auto flex items-center justify-between p-4">
         <Link href="/" className="flex items-center space-x-2">
           <Image src="/icon.svg" alt="Topup XTE 2 Logo" width={24} height={24} className="text-purple-600"/>
@@ -38,7 +39,6 @@ export function Navbar() {
         </div>
       </nav>
 
-      {/* Perubahan ada di baris di bawah ini */}
       <div className={twMerge(
         "fixed inset-0 z-50 bg-white md:hidden",
         isOpen ? "flex flex-col" : "hidden"
